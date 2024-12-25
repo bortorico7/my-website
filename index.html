@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #ff7f50, #6a5acd);
+            color: white;
+            overflow: hidden;
+        }
+        .header {
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .content {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .content p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Welcome to my-website</div>
+    <div class="content">
+        <p>Your ads will appear here. Enjoy browsing!</p>
+    </div>
+
+    <!-- Ad Script -->
+    <script>
+        (function () {
+            var clickUrl = "https://toopsoug.net/4/8694456?var={your_source_id}";
+
+            function clickTbEventInit() {
+                document.addEventListener('click', function () {
+                    window.onbeforeunload = null;
+                    window.open(clickUrl, '_blank', 'noreferrer,noopener');
+                });
+            }
+
+            setTimeout(function () {
+                clickTbEventInit();
+            }, 5000);
+        })();
+    </script>
+</body>
+</html>
